@@ -1,1 +1,5 @@
-./idea
+.idea/
+log/development.log
+tmp/cache/
+tmp/pids/
+tmp/restart.txt

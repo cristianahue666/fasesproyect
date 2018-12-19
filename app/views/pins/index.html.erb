@@ -1,19 +1,20 @@
 <div class="container">
-<p id="notice"><%= notice %></p>
-
-<h1>Dashboards Proyectos</h1>
+  <h1>Dashboards Proyectos</h1>
 
 
 
   
     <% @pins.each do |pin| %>
-        <%= image_tag(pin.photo, :style => 'width:300px') %>
-        <%= pin.titulo %>
-        <%= pin.description %>
-        <%= link_to 'Show', pin %>
-        <%= link_to 'Edit', edit_pin_path(pin) %>
-        <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      
+        <div class="col-md-3">
+            <div class="thumbnail">
+          <%= image_tag(pin.photo, :class => 'img-responsive') %>
+          <%= pin.titulo %>
+          <%= pin.description %>
+          <%= link_to 'Show', pin %>
+          <%= link_to 'Edit', edit_pin_path(pin) %>
+          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
     <% end %>
   
 

@@ -12,8 +12,37 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="nav-link" href="<%=root_path %>">Home<span class="sr-only">(current)</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav navbar-nav navbar-right">
+      <% if current_user.nil? %>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="<%=new_user_session_path %>">Ingreso<span class="sr-only">(current)</span></a>
+           <li class="nav-item active">
+          <a class="nav-link" href="<%=new_user_registration_path %>">Registro<span class="sr-only">(current)</span></a>  
+          <li class="nav-item active">
+          <a class="nav-link" href="<%=pins_path %>">Ver Proyectos<span class="sr-only">(current)</span></a>     
+          <% else %>
+          <li class="nav-item active">
+          <a class="nav-link" href="<%=new_pin_path %>">Crear Proyecto<span class="sr-only">(current)</span></a>
+            <li class="nav-item active">
+          <a class="nav-link" href="<%=pins_path %>">Ver Proyectos<span class="sr-only">(current)</span></a>
+           <li class="nav-item active">
+          <a class="nav-link" href="<%=destroy_user_session_path %>" data-method="delete" >Salir <span class="sr-only">(current)</span></a>
+        <% end %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<div class="container">
+    <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+    <%= yield %>
+</div>
     
-        <%= render 'shared/navbar' %>
-        <%= yield %>
   </body>
 </html>

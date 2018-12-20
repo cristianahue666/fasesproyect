@@ -26,8 +26,9 @@
         <%= image_tag@pin.photo2 %>
       </p>
   
-
+  <% if user_signed_in? %>
 <%= link_to 'Editar', edit_pin_path(@pin) %> |
+<% end -%>
 <%= link_to 'Atras', pins_path %> |
  
  

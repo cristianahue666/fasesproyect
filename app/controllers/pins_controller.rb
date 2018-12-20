@@ -30,7 +30,7 @@ end
   # POST /pins.json
   def create
     @pin = Pin.new(pin_params)
-    @pon.user_id = current_user.id
+    @pin.user_id = current_user.id
     respond_to do |format|
       if @pin.save
         format.html { redirect_to @pin, notice: 'Pin was successfully created.' }

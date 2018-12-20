@@ -1,6 +1,10 @@
-<h1>Editing Pin</h1>
-
-<%= render 'form', pin: @pin %>
-
-<%= link_to 'Show', @pin %> |
-<%= link_to 'Back', pins_path %>
+<div class="container">
+    <div class="row">
+            <div class="col-md-6">
+                <h1>Editar Proyecto</h1>
+                <%= render 'form', pin: @pin %>
+            </div>
+    </div>
+    <%= link_to 'Show', @pin %> |
+    <%= link_to 'Back', pins_path %>
+</div>

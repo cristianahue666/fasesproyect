@@ -13,8 +13,9 @@
       <strong>Descripción</strong>
       <%= @pin.description %>
     </p>
-
+  <% if user_signed_in? %>
 <%= link_to 'Editar', edit_pin_path(@pin) %> |
+<% end -%>
 <%= link_to 'Atras', pins_path %> |
  
  

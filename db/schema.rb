@@ -15,23 +15,15 @@ ActiveRecord::Schema.define(version: 2018_12_20_134002) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "fases", force: :cascade do |t|
-    t.string "name"
-    t.string "photo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "pins", force: :cascade do |t|
     t.string "photo"
     t.string "titulo"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "fase"
+    t.integer "user_id"
     t.string "fases"
     t.string "photo2"
-    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

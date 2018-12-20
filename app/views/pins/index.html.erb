@@ -1,6 +1,8 @@
 <div class="container">
+  
+<p id="notice"><%= notice %></p>
 
-  <h1>Proyectos</h1>
+<h1>Proyectos</h1>
 
 
 
@@ -16,9 +18,11 @@
           <%= pin.fases %>
           <%= image_tag(pin.photo2, :class => 'img-responsive') %>
           <div class="buttons" style="margin-top:10px; margin-bottom:10px">
+        <% if user_signed_in? %>
           <%= link_to 'Show', pin, :class => 'btn' %>
           <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn' %>
           <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %>
+        <% end -%>
       </div>
     </div>
   </div>
@@ -27,6 +31,6 @@
 
 
 <br>
-
-
-</div>
+  <% if user_signed_in? %>
+    <%= link_to 'New Pin', new_pin_path %>
+  <% end %>

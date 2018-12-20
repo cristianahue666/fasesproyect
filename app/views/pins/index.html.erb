@@ -13,13 +13,17 @@
             <div class="thumbnail">
           <%= pin.titulo %>
           <%= image_tag(pin.photo, :class => 'img-responsive') %>
+<<<<<<< HEAD
           <%= pin.description %>
           <%= pin.fases %>
+=======
+          
+          <%= pin.description %>
+          <%= pin.fases %>
+
+>>>>>>> master
           <div class="buttons" style="margin-top:10px; margin-bottom:10px">
         <% if user_signed_in? %>
-          <%= link_to 'Show', pin, :class => 'btn' %>
-          <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn' %>
-          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %>
         <% end -%>
       </div>
     </div>

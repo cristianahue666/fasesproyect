@@ -13,19 +13,6 @@
       <strong>Descripción</strong>
       <%= @pin.description %>
     </p>
-
-
-   
-      <p>
-        <strong>Nombre Fase:</strong>
-        <%= @pin.fases %>
-      </p>
-
-      <p> 
-        <strong></strong>
-        <%= image_tag@pin.photo2 %>
-      </p>
-  
   <% if user_signed_in? %>
 <%= link_to 'Editar', edit_pin_path(@pin) %> |
 <% end -%>

@@ -3,10 +3,6 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Proyectos</h1>
-
-
-
-
   
     <% @pins.each do |pin| %>
         <div class="col-md-3">
@@ -15,7 +11,6 @@
           <%= image_tag(pin.photo, :class => 'img-responsive') %>
           <%= pin.description %>
           <%= pin.fases %>
-
           <div class="buttons" style="margin-top:10px; margin-bottom:10px">
         <% if user_signed_in? %>
           <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn' %>

@@ -1,11 +1,7 @@
 <div class="container">
-<<<<<<< HEAD
-<p id="notice"><%= notice %></p>
 
-<h1>Proyectos</h1>
-=======
   <h1>Proyectos</h1>
->>>>>>> master
+
 
 
 
@@ -15,7 +11,10 @@
             <div class="thumbnail">
           <%= pin.titulo %>
           <%= image_tag(pin.photo, :class => 'img-responsive') %>
+          <%= image_tag(pin.photo2, :class => 'img-responsive') %>
           <%= pin.description %>
+          <%= pin.fases %>
+          <%= image_tag(pin.photo2, :class => 'img-responsive') %>
           <div class="buttons" style="margin-top:10px; margin-bottom:10px">
           <%= link_to 'Show', pin, :class => 'btn' %>
           <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn' %>

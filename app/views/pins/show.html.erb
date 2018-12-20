@@ -1,19 +1,35 @@
 <p id="notice"><%= notice %></p>
+    <p>
+      <strong>Titulo:</strong>
+      <%= @pin.titulo %>
+    </p>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @pin.titulo %>
-</p>
+    <p>
+      <strong> </strong>
+      <%= image_tag(@pin.photo) %>
+    </p>
 
-<p>
-  <strong> </strong>
-  <%= image_tag(@pin.photo) %>
-</p>
+    <p>
+      <strong>Description:</strong>
+      <%= @pin.description %>
+    </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @pin.description %>
-</p>
+    <hr>
 
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
-<%= link_to 'Back', pins_path %>
+    <p>
+      <strong>name:</strong>
+      <%= @pin.fases %>
+    </p>
+
+    <p>
+      <strong>photo2:</strong>
+      <%= image_tag@pin.photo2 %>
+    </p>
+
+  </div>
+</div>
+<%= link_to 'Editar', edit_pin_path(@pin) %> |
+<%= link_to 'Atras', pins_path %> |
+
+</div>  
+ 

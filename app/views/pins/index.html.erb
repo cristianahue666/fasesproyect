@@ -13,10 +13,8 @@
             <div class="thumbnail">
           <%= pin.titulo %>
           <%= image_tag(pin.photo, :class => 'img-responsive') %>
-          <%= image_tag(pin.photo2, :class => 'img-responsive') %>
           <%= pin.description %>
           <%= pin.fases %>
-          <%= image_tag(pin.photo2, :class => 'img-responsive') %>
           <div class="buttons" style="margin-top:10px; margin-bottom:10px">
         <% if user_signed_in? %>
           <%= link_to 'Show', pin, :class => 'btn' %>

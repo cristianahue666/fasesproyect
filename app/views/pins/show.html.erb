@@ -10,26 +10,22 @@
     </p>
 
     <p>
-      <strong>Description:</strong>
+      <strong>Descripción</strong>
       <%= @pin.description %>
     </p>
 
-    <hr>
+|   
+      <p>
+        <strong>Nombre Fase:</strong>
+        <%= @pin.fases %>
+      </p>
 
-    <p>
-      <strong>name:</strong>
-      <%= @pin.fases %>
-    </p>
-
-    <p>
-      <strong>photo2:</strong>
-      <%= image_tag@pin.photo2 %>
-    </p>
-
-  </div>
-</div>
+      <p> 
+        <strong></strong>
+        <%= image_tag@pin.photo2 %>
+      </p>
+  
 <%= link_to 'Editar', edit_pin_path(@pin) %> |
 <%= link_to 'Atras', pins_path %> |
-
-</div>  
+ 
  

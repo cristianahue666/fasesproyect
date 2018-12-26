@@ -14,7 +14,7 @@
             <div class="descripcion" style="text-align: center;">
               <%= pin.description %>
             </div>
-          <div class="buttons" style="margin-top:10px; margin-bottom:10px; text-align: center;>
+          <div class="buttons" style="margin-top:10px; margin-bottom:10px; text-align: center;">
         <% if user_signed_in? %>
           <%= link_to 'New Fase', newfase_path(pin), :class => 'btn' %>
           <%= link_to 'Edit', edit_pin_path(pin), :class => 'btn' %>

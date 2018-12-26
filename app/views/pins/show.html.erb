@@ -23,9 +23,11 @@
     </div>
       <% end -%>
   <% if user_signed_in? %>
-  <div button type="button" class="btn btn-warning btn-lg" style="padding: 10px; ">
-  | <%=  link_to 'Editar', edit_pin_path(@pin) %> |
-    <% end -%>
-    <%= link_to 'Atras', pins_path %> |
- </div>
+ <div button type="button" class="btn btn-warning btn-lg" style="padding: 10px; ">
+<%= link_to 'Editar', edit_pin_path(@pin) %> |
+<%= link_to 'New Fase', newfase_path(@pin) %> |
+
+<% end -%>
+<%= link_to 'Atras', pins_path %> |
+</div>
  

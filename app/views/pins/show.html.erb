@@ -13,6 +13,14 @@
       <strong>Descripción</strong>
       <%= @pin.description %>
     </p>
+    <ul>
+     <%- @pin.fases.each do |fase| %>
+      <li>
+      <h4><%= fase.titulo %> : </h4>
+      <h5> <%= fase.descripcion %> </h5>
+    </li>
+      <% end -%>
+    </ul>
   <% if user_signed_in? %>
 <%= link_to 'Editar', edit_pin_path(@pin) %> |
 <% end -%>

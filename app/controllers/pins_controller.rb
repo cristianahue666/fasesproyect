@@ -6,6 +6,7 @@ def mypins
   @pins = current_user.pins
 end
 
+
   # GET /pins
   # GET /pins.json
   def index

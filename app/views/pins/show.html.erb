@@ -5,23 +5,26 @@
         <p>
           <strong>Titulo:</strong>
           <%= @pin.titulo %>
-        </p>
-        
-
+          </p>
         <p>
           <strong> </strong>
           <%= image_tag(@pin.photo) %>
         </p>
-
-        <p>
-          <strong>Descripción</strong>
-          <%= @pin.description %>
-        </p>
-      <% if user_signed_in? %>
-    <%= link_to 'Editar', edit_pin_path(@pin) %> |
-    <% end -%>
-    <%= link_to 'Atras', pins_path %> |
-  </div>
-</div>
+    <p>
+      <strong>Descripción</strong>
+      <%= @pin.description %>
+    </p>
+    <ul>
+     <%- @pin.fases.each do |fase| %>
+      <li>
+      <h4><%= fase.titulo %> : </h4>
+      <h5> <%= fase.descripcion %> </h5>
+    </li>
+      <% end -%>
+    </ul>
+  <% if user_signed_in? %>
+<%= link_to 'Editar', edit_pin_path(@pin) %> |
+<% end -%>
+<%= link_to 'Atras', pins_path %> |
  
  

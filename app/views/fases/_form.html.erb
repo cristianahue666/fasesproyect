@@ -1,0 +1,30 @@
+<%= form_tag(createfase_path(@fase.pin_id)) do %>
+  <% if @fase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fase.errors.count, "error") %> prohibited this fase from being saved:</h2>
+
+      <ul>
+      <% @fase.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <div class="field">
+      <%= label_tag :titulo  %>
+      <%= text_field_tag :titulo, @fase.titulo, :class => 'form-control' %>
+
+    </div>
+     <div class="field">
+      <%= label_tag :descripcion %>
+      <%= text_field_tag :descripcion, @fase.descripcion, :class => 'form-control' %>
+    </div>
+  </div>
+  
+
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+<% end %>

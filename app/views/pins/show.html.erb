@@ -1,21 +1,27 @@
 <p id="notice"><%= notice %></p>
-    <p>
-      <strong>Titulo:</strong>
-      <%= @pin.titulo %>
-    </p>
+<div class="row">
+  <div class="col-md-3"></div>
+        <div class="show" style="border-style: dotted; text-align: center;">
+        <p>
+          <strong>Titulo:</strong>
+          <%= @pin.titulo %>
+        </p>
+        
 
-    <p>
-      <strong> </strong>
-      <%= image_tag(@pin.photo) %>
-    </p>
+        <p>
+          <strong> </strong>
+          <%= image_tag(@pin.photo) %>
+        </p>
 
-    <p>
-      <strong>Descripción</strong>
-      <%= @pin.description %>
-    </p>
-  <% if user_signed_in? %>
-<%= link_to 'Editar', edit_pin_path(@pin) %> |
-<% end -%>
-<%= link_to 'Atras', pins_path %> |
+        <p>
+          <strong>Descripción</strong>
+          <%= @pin.description %>
+        </p>
+      <% if user_signed_in? %>
+    <%= link_to 'Editar', edit_pin_path(@pin) %> |
+    <% end -%>
+    <%= link_to 'Atras', pins_path %> |
+  </div>
+</div>
  
  

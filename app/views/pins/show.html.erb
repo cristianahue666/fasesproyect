@@ -2,10 +2,10 @@
 <div class="row">
   <div class="col-md-3"></div>
         <div class="show" style="border-style: dotted; text-align: center;">
-        <p>
+        <h2>
           <strong>Titulo:</strong>
           <%= @pin.titulo %>
-          </p>
+          </h2>
         <p>
           <strong> </strong>
           <%= image_tag(@pin.photo) %>
@@ -13,18 +13,19 @@
     <p>
       <strong>Descripción</strong>
       <%= @pin.description %>
-    </p>
-    <ul>
+    </p>    
      <%- @pin.fases.each do |fase| %>
-      <li>
-      <h4><%= fase.titulo %> : </h4>
+     <div class="fase" style="border-style:double"> 
+      <strong>Titulo Fase</strong>
+      <h4><%= fase.titulo %> </h4>
+      <strong>Descripcion Fase</strong> 
       <h5> <%= fase.descripcion %> </h5>
-    </li>
+    </div>
       <% end -%>
-    </ul>
   <% if user_signed_in? %>
 <%= link_to 'Editar', edit_pin_path(@pin) %> |
 <% end -%>
 <%= link_to 'Atras', pins_path %> |
+<%= link_to 'New Fase', newfase_path(pin), :class => 'btn' %>
  
  
